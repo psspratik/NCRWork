@@ -15,9 +15,26 @@ void binary_to_decimal()
 	printf("decimal number = %d",decimal);
 	getchar();
 }
+
+void decimal_to_binary()
+{
+	int binary = 0, decimal = 0, i = 1;
+	printf("Enter decimal number: \n");
+	scanf_s("%d", &decimal);
+	while (decimal)
+	{
+		binary = binary + (decimal % 2)*(i);
+		i = i * 10;
+		decimal /= 2;
+	}
+	printf("binary number = %d\n", binary);
+	getchar();
+}
+
 int main()
 {
 	binary_to_decimal();
+	decimal_to_binary();
 	getchar();
 	return 0;
 }
